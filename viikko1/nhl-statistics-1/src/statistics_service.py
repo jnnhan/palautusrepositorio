@@ -1,13 +1,10 @@
-from player_reader import PlayerReader
-
-
 def sort_by_points(player):
     return player.points
 
 
 class StatisticsService:
-    def __init__(self):
-        reader = PlayerReader()
+    def __init__(self, player_reader):
+        reader = player_reader
 
         self._players = reader.get_players()
 
