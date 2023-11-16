@@ -32,9 +32,6 @@ Login Should Fail With Message
     Login Page Should Be Open
     Page Should Contain  ${message}
 
-Submit Credentials
-    Click Button  Login
-
 Set Username
     [Arguments]  ${username}
     Input Text  username  ${username}
@@ -42,6 +39,9 @@ Set Username
 Set Password
     [Arguments]  ${password}
     Input Password  password  ${password}
+
+Submit Credentials
+    Click Button  Login
 
 Create User And Go To Login Page
     Create User  kalle  kalle123
